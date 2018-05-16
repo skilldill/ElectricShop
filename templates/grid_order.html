@@ -1,0 +1,29 @@
+{% extends 'base2.html' %}
+{% block div %}
+
+<div>
+    <table class="table-orders">
+        <thead>
+            <h1>Заказы</h1>
+        </thead>
+        <tbody>
+            <tr class='tr-order'>
+                <td class='td-order'><h3>ID</h3></td>
+                <td class='td-order'><h3>Название(кол.)</h3></td>
+                <td class='td-order'><h3>Сумма заказа</h3></td>
+                <td class='td-order'><h3>Дата заказа</h3></td>
+            </tr>
+            {% for order in Orders %}
+                <tr class='tr-order'>
+                    {% for part_order in order %}
+                        <td class='td-order'>
+                            <p>{{part_order}}</p>
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+    
+{% endblock %}

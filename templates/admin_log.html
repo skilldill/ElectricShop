@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% block section %}
+<section class="admin">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="admin-block">
+                    <h1 class="admin-block__title">
+                        Администратор
+                    </h1>
+                    <form class="admin-block__form d-flex flex-column" action="/admin_page" method='post'>
+                        <div class="admin-block__input">
+                            <label for="login">Логин</label>
+                            <input class="admin-block__input-text" type="text" name="login" placeholder="логин...">
+                        </div>
+                        <div class="admin-block__input">
+                            <label for="pass">Пароль</label>
+                            <input class="admin-block__input-text" type="password" name="pass" placeholder="пароль...">
+                        </div>
+                        <input type="submit" class="admin-block__submit" value="Войти">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!---<h1>Администратор</h1>
+<div class='formlog'>
+  <form action="/admin_page" method='post'>
+    <label>Логин</label><br>
+    <input class='txt' type="text" name="login" placeholder="login..."><br>
+
+    <label>Пароль</label><br>
+    <input class='txt' type="password" name="pass" placeholder="password..."><br>
+
+    <input class='sumblog' type="submit" value="Войти">
+  </form>
+    <span class='atten'>{{attention}}</span>
+</div>-->
+{% endblock %}
