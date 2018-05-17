@@ -90,6 +90,10 @@ def getOrder():
                            Orders=orders,
                            Catigorys=catigorys)
 
+@app.route('/admin/products/uploadp')
+def upload():
+    
+
 if __name__ == '__main__':
     app.run(debug=True)
 

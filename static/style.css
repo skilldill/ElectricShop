@@ -241,3 +241,124 @@ text-center{
     transition: all 0.3s;
     background-color:#6c8b6e;
 }
+
+/*----- For products -----*/
+.products{
+    
+}
+
+.products__item{
+    margin: 10px;
+    width: 90%;
+    height: 90%;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 6px;
+    border-color: #8aaf8c;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+.products__item:hover{
+    border-color: #6c8b6e;
+    transition: all 1s;
+}
+
+.products__item-img {
+    width: 70%;
+    word-wrap: break-word;
+}
+
+.products__item_btn_add{
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+    border-style:none;
+    /*border-width: 2px;*/
+    /*border-style: solid;*/
+    /*border-color: #6c8b6e;*/
+    background-color: #8aaf8c;
+    transition: all 0.5s;
+    border-radius: 3px;
+    padding-top:4px;
+    padding-bottom: 4px;
+}
+
+.products__item_btn_add:hover{
+    background-color: #6c8b6e;
+    transition: all 0.5s;
+}
+
+/*-----Products grid-----*/
+.products-grid {
+    margin: auto;
+    margin-top: 20px;
+    border:2px;
+    border-style: solid;
+    border-collapse: collapse;
+    font-size: 14px;
+    width: 80%;
+}
+
+.products-grid th{
+    border:2px;
+    border-style: solid;
+    text-align: center;
+    padding: 3px;
+}
+
+.products-grid td{
+    text-align: center;
+    border:2px;
+    border-style: solid;
+    padding: 3px;
+}
+
+.products-grid i{
+    font-size: 14px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.products-grid img{
+    width:50%;
+}
+
+.products-grid__input{
+    border-style: none;
+    font-size: 12px;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    width: 90%;
+}
+
+.products-grid__input-rows{
+    resize: vertical;
+    overflow: hidden;
+}
+
+.products-grid__input-discription{
+    resize: vertical;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 104px;
+    padding: 0;
+}
+
+.products-grid__control {
+    margin: 10px 10px 10px 10px;
+    border-radius: 5px;
+    transition: background-color  .3s;
+}
+
+.products-grid__control-accept:hover{
+    background-color: #10cc10;
+    transition: background-color  .3s;
+    color:white;
+}
+
+.products-grid__control-delete:hover{
+    color:white;
+    background-color: #e80f0f;
+    transition: background-color .3s;
+}

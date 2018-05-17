@@ -1,0 +1,96 @@
+{%extends 'index.html'%}
+{% block section %}
+<section class="products-block">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <table class="products-grid">
+                    <tr>
+                        <th class="title-row">ID</th>
+                        <th class="title-row">Изображение</th>
+                        <th class="title-row">Название</th>
+                        <th class="title-row">Описание</th>
+                        <th class="title-row">Наличие</th>
+                        <th class="title-row">Категория</th>
+                        <th class="title-row">Цена,руб</th>
+                        <th class="title-row">Контроль</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Автоматически
+                        </td>
+                        <td>
+                            <input type="file" name="file">
+                        </td>
+                        <td>
+                            <input type="text" name="name">
+                        </td>
+                        <td>
+                            <input type="text" name="discription">
+                        </td>
+                        <td>
+                            <input type="text" name="avail">
+                        </td>
+                        <td>
+                            <input type="text" name="catigory">
+                        </td>
+                        <td>
+                            <input type="text" name="price">
+                        </td>
+                        <td>
+                            <div class="products-grid__controls d-flex flex-column">
+                                <div class="products-grid__control products-grid__control-accept">
+                                    <i id="change" class="fas fa-check"></i>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {% for product in Products %}
+                    <tr>
+                        <td>
+                            <span>{{product[0]}}</span>
+                        </td>
+                        <td>
+                            <img src="{{ url_for('static', filename=product[4]) }}" alt="{{product[1]}}">
+                        </td>
+                        <td>
+                            <textarea class="products-grid__input products-grid__input-rows">
+                                {{product[1]}}
+                            </textarea>
+                        </td>
+                        <td>
+                            <textarea class="products-grid__input products-grid__input-discription">
+                                {{product[2]}}
+                            </textarea>
+                        </td>
+                        <td>
+                            {% if product[3]==1 %}
+                            <span>В наличии</span>
+                            {% else %}
+                            <span>Нет наличии</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            Контроллеры
+                        </td>
+                        <td>
+                            <input class="products-grid__input" type="text" value="{{product[6]}}">
+                        </td>
+                        <td>
+                            <div class="products-grid__controls d-flex flex-column">
+                                <div class="products-grid__control products-grid__control-accept">
+                                    <i id="change" class="fas fa-check"></i>
+                                </div>
+                                <div class="products-grid__control products-grid__control-delete">
+                                    <i id="delete" class="fas fa-trash-alt"></i>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+{% end block %}
